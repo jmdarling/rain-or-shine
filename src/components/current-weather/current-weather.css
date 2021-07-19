@@ -1,0 +1,27 @@
+.current-weather {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    color: #65AED5;
+}
+
+.current-weather__description {
+    display: block;
+
+    font-size: 14px;
+}
+
+.current-weather__detail-wrapper {
+    margin-left: 13px;
+}
+
+.current-weather__temperature {
+    font-size: 48px;
+}
+
+.current-weather__wind {
+    display: block;
+
+    font-size: 14px;
+}

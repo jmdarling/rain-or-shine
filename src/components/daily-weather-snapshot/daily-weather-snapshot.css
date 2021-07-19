@@ -1,0 +1,26 @@
+.daily-weather-snapshot {
+    flex-grow: 1;
+    padding-bottom: 16px;
+    padding-top: 16px;
+
+    list-style: none;
+    text-align: center;
+}
+
+.daily-weather-snapshot:not(:last-of-type) {
+    border-right: 1px solid #D8D8D8;
+}
+
+.daily-weather-snapshot__conditions {
+
+}
+
+.daily-weather-snapshot__day {
+    display: block;
+    font-size: 14px;
+}
+
+.daily-weather-snapshot__temperature {
+    display: block;
+    font-size: 24px;
+}

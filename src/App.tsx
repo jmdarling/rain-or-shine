@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useCurrentPosition } from "./hooks/use-current-position.hook";
+import { useWeather } from "./hooks/use-weather.hook";
+import { Heading } from "./components/heading/heading";
+
+import "./App.css";
+import { CurrentWeather } from "./components/current-weather/current-weather";
+import { DailyWeatherSnapshot } from "./components/daily-weather-snapshot/daily-weather-snapshot";
 
 function App() {
+  const currentPosition = useCurrentPosition();
+  const weather = useWeather(currentPosition);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="app">
+      <Heading />
+      <div className="app__body">
+        <div className="app__body__current">
+          <CurrentWeather weather={weather} />
+        </div>
+        <ul className="app__body__forecast">
+          {weather?.dailyWeatherMoments.map((weatherMoment) => (
+            <DailyWeatherSnapshot
+              key={weatherMoment.applicableDateTime.toISOString()}
+              weatherMoment={weatherMoment}
+            />
+          ))}
+        </ul>
+      </div>
+    </main>
   );
 }
 
