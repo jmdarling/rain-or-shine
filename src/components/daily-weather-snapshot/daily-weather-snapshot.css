@@ -11,8 +11,8 @@
     border-right: 1px solid #D8D8D8;
 }
 
-.daily-weather-snapshot__conditions {
-
+.daily-weather-snapshot__conditions-display {
+    margin-top: 4px;
 }
 
 .daily-weather-snapshot__day {

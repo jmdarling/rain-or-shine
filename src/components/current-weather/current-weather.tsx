@@ -3,12 +3,33 @@ import { Weather } from "../../models/weather.model";
 import { titleCase } from "../../utilities/string/string.utilities";
 
 import "./current-weather.css";
+import { ConditionsDisplay } from "../conditions-display/conditions-display";
 
 export interface CurrentWeatherProps {
   weather?: Weather;
 }
 
 export const CurrentWeather: React.FC<CurrentWeatherProps> = ({ weather }) => {
+  const CurrentWeatherConditions: React.FC = useMemo(() => {
+    return () => {
+      if (weather == null) {
+        return null;
+      }
+
+      return (
+        <ConditionsDisplay
+          condition={
+            weather.currentWeatherMoment.weatherMomentConditions[0]
+              .weatherMomentCondition
+          }
+          helpTextOverride={
+            weather.currentWeatherMoment.weatherMomentConditions[0].description
+          }
+        />
+      );
+    };
+  }, [weather]);
+
   const CurrentWeatherTemperature: React.FC = useMemo(() => {
     return () => {
       if (weather == null) {
@@ -56,6 +77,7 @@ export const CurrentWeather: React.FC<CurrentWeatherProps> = ({ weather }) => {
   return (
     <p className="current-weather">
       <CurrentWeatherTemperature />
+      <CurrentWeatherConditions />
       <span className="current-weather__detail-wrapper">
         <CurrentWeatherDescription />
         <CurrentWeatherWind />

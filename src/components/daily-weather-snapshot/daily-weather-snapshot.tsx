@@ -3,6 +3,7 @@ import { WeatherMoment } from "../../models/weather.model";
 import { getDayNameFromDayIndex } from "../../utilities/date/date-format.utilities";
 
 import "./daily-weather-snapshot.css";
+import { ConditionsDisplay } from "../conditions-display/conditions-display";
 
 export interface DailyWeatherSnapshotProps {
   weatherMoment: WeatherMoment;
@@ -35,9 +36,15 @@ export const DailyWeatherSnapshot: React.FC<DailyWeatherSnapshotProps> = ({
       }
 
       return (
-        <span className="daily-weather-snapshot__conditions">
-          {weatherMoment.weatherMomentConditions[0].weatherMomentCondition}
-        </span>
+        <ConditionsDisplay
+          className="daily-weather-snapshot__conditions-display"
+          condition={
+            weatherMoment.weatherMomentConditions[0].weatherMomentCondition
+          }
+          helpTextOverride={
+            weatherMoment.weatherMomentConditions[0].description
+          }
+        />
       );
     };
   }, [weatherMoment]);
