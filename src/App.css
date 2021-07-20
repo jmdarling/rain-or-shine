@@ -12,18 +12,25 @@
 
 .app__body {
   flex-basis: 100%;
+  height: 100%;
+  position: relative;
 
   background-color: #FFFFFF;
-  border-radius: 3px;
-  box-shadow: 0 0 15px 0 #00000020;
+}
+
+/* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
+@media (min-width: 576px) {
+  .app__body {
+    height: auto;
+
+    border-radius: 3px;
+    box-shadow: 0 0 15px 0 #00000020;
+  }
 }
 
 .app__body__current {
-  height: 368px;
-  padding: 9px 28px;
-
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  height: 100%;
+  padding: 8px 28px;
 
   background-image: url("./dallas.png");
   background-position-x: center;
@@ -32,10 +39,49 @@
   background-size: cover;
 }
 
+/* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
+@media (min-width: 576px) {
+  .app__body__current {
+    height: 368px;
+
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+}
+
 .app__body__forecast {
+  bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 0;
   padding: 0;
+  position: absolute;
+  width: 100%;
+
+  background: #FFFFFF;
+}
+
+/* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
+@media (min-width: 576px) {
+  .app__body__forecast {
+    position: relative;
+  }
+}
+
+
+.app__heading {
+  position: absolute;
+  top: 300px;
+
+  text-shadow: 2px 2px 4px #00000090;
+}
+
+/* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
+@media (min-width: 576px) {
+  .app__heading {
+    top: -68px;
+
+    text-shadow: none;
+  }
 }

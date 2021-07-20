@@ -1,19 +1,33 @@
 .heading {
     color: #FFFFFF;
     flex-basis: 100%;
+    margin: 0;
+    width: 100%;
+
+    text-align: center;
 }
 
 .heading__position-description {
     display: block;
 
-    font-size: 18px;
-    text-align: center;
+    font-size: 24px;
+}
+
+@media (min-width: 576px) {
+    .heading__position-description {
+        font-size: 18px;
+    }
 }
 
 .heading__date {
     display: block;
 
-    font-size: 14px;
-    font-weight: normal;
-    text-align: center;
+    font-size: 18px;
+}
+
+@media (min-width: 576px) {
+    .heading__date {
+        font-size: 14px;
+        font-weight: normal;
+    }
 }

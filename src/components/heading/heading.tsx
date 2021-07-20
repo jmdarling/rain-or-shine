@@ -6,9 +6,11 @@ import { usePositionDescription } from "../../hooks/use-position-description.hoo
 
 import "./heading.css";
 
-export interface HeadingProps {}
+export interface HeadingProps {
+  className?: string;
+}
 
-export const Heading: React.FC<HeadingProps> = () => {
+export const Heading: React.FC<HeadingProps> = ({ className }) => {
   const date = useDate();
   const currentPosition = useCurrentPosition();
   const positionDescription = usePositionDescription(currentPosition);
@@ -37,8 +39,10 @@ export const Heading: React.FC<HeadingProps> = () => {
     };
   }, [date]);
 
+  const combinedClassName = `heading ${className}`;
+
   return (
-    <h1 className="heading">
+    <h1 className={combinedClassName}>
       <span className="sr-only">Weather for</span>
       <HeadingPositionDescription />
       <HeadingDate />

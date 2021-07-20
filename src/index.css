@@ -24,9 +24,14 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 24px;
+}
 
-  background: linear-gradient(to bottom left, #65AED5, #2685BD, #1768AA);
+@media (min-width: 576px) {
+  #root {
+    padding: 24px;
+
+    background: linear-gradient(to bottom left, #65AED5, #2685BD, #1768AA);
+  }
 }
 
 .sr-only {

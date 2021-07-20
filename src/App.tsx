@@ -13,8 +13,8 @@ function App() {
 
   return (
     <main className="app">
-      <Heading />
       <div className="app__body">
+        <Heading className="app__heading" />
         <div className="app__body__current">
           <CurrentWeather weather={weather} />
         </div>
