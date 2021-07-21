@@ -4,12 +4,18 @@ import { titleCase } from "../../utilities/string/string.utilities";
 
 import "./current-weather.css";
 import { ConditionsDisplay } from "../conditions-display/conditions-display";
+import { TemperatureUnit } from "../../models/unit";
+import { convertFahrenheitToCelsius } from "../../utilities/number/unit-conversion.utilities";
 
 export interface CurrentWeatherProps {
+  temperatureUnit: TemperatureUnit;
   weather?: Weather;
 }
 
-export const CurrentWeather: React.FC<CurrentWeatherProps> = ({ weather }) => {
+export const CurrentWeather: React.FC<CurrentWeatherProps> = ({
+  temperatureUnit,
+  weather,
+}) => {
   const CurrentWeatherConditions: React.FC = useMemo(() => {
     return () => {
       if (weather == null) {
@@ -38,11 +44,18 @@ export const CurrentWeather: React.FC<CurrentWeatherProps> = ({ weather }) => {
 
       return (
         <span className="current-weather__temperature">
-          {Math.round(weather.currentWeatherMoment.temperatureFahrenheit)}&#176;
+          {temperatureUnit === TemperatureUnit.CELSIUS
+            ? Math.round(
+                convertFahrenheitToCelsius(
+                  weather.currentWeatherMoment.temperatureFahrenheit
+                )
+              )
+            : Math.round(weather.currentWeatherMoment.temperatureFahrenheit)}
+          &#176;
         </span>
       );
     };
-  }, [weather]);
+  }, [temperatureUnit, weather]);
 
   const CurrentWeatherDescription: React.FC = useMemo(() => {
     return () => {

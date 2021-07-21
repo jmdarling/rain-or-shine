@@ -4,12 +4,16 @@ import { getDayNameFromDayIndex } from "../../utilities/date/date-format.utiliti
 
 import "./daily-weather-snapshot.css";
 import { ConditionsDisplay } from "../conditions-display/conditions-display";
+import { TemperatureUnit } from "../../models/unit";
+import { convertFahrenheitToCelsius } from "../../utilities/number/unit-conversion.utilities";
 
 export interface DailyWeatherSnapshotProps {
+  temperatureUnit: TemperatureUnit;
   weatherMoment: WeatherMoment;
 }
 
 export const DailyWeatherSnapshot: React.FC<DailyWeatherSnapshotProps> = ({
+  temperatureUnit,
   weatherMoment,
 }) => {
   const Day: React.FC = useMemo(() => {
@@ -57,11 +61,16 @@ export const DailyWeatherSnapshot: React.FC<DailyWeatherSnapshotProps> = ({
 
       return (
         <span className="daily-weather-snapshot__temperature">
-          {Math.round(weatherMoment.temperatureFahrenheit)}&#176;
+          {temperatureUnit === TemperatureUnit.CELSIUS
+            ? Math.round(
+                convertFahrenheitToCelsius(weatherMoment.temperatureFahrenheit)
+              )
+            : Math.round(weatherMoment.temperatureFahrenheit)}
+          &#176;
         </span>
       );
     };
-  }, [weatherMoment]);
+  }, [temperatureUnit, weatherMoment]);
 
   return (
     <li className="daily-weather-snapshot">

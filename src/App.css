@@ -49,6 +49,12 @@
   }
 }
 
+.app__body__current__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
 .app__body__forecast {
   bottom: 0;
   display: flex;

@@ -1,0 +1,36 @@
+.temperature-unit-toggle {
+    border: none;
+    border-radius: 12.5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 3px;
+    width: 55px;
+
+    background-color: #65AED5;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.temperature-unit-toggle__value {
+    align-items: center;
+    display: flex;
+    height: 21px;
+    width: 21px;
+    justify-content: center;
+    padding-bottom: 1px;
+}
+
+.temperature-unit-toggle--celsius-active > .temperature-unit-toggle__value--celsius {
+    background: #FFFFFF;
+    border-radius: 100%;
+    color: #65AED5;
+}
+
+.temperature-unit-toggle--fahrenheit-active > .temperature-unit-toggle__value--fahrenheit {
+    background: #FFFFFF;
+    border-radius: 100%;
+    color: #65AED5;
+}
+
