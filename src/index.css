@@ -26,6 +26,7 @@ body {
   margin: 0;
 }
 
+/* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
 @media (min-width: 576px) {
   #root {
     padding: 24px;

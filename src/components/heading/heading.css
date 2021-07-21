@@ -1,4 +1,5 @@
 .heading {
+    background: #65AED5AA;
     color: #FFFFFF;
     flex-basis: 100%;
     margin: 0;
@@ -7,15 +8,39 @@
     text-align: center;
 }
 
+/* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
+@media (min-width: 576px) {
+    .heading {
+        background: none;
+    }
+
+}
+
 .heading__position-description {
-    display: block;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
     font-size: 24px;
 }
 
+/* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
 @media (min-width: 576px) {
     .heading__position-description {
         font-size: 18px;
+    }
+}
+
+.heading__position-description__icon {
+    height: 24px;
+    width: auto;
+    margin-right: 4px;
+}
+
+/* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
+@media (min-width: 576px) {
+    .heading__position-description__icon {
+        height: 16px;
     }
 }
 
@@ -25,6 +50,7 @@
     font-size: 18px;
 }
 
+/* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
 @media (min-width: 576px) {
     .heading__date {
         font-size: 14px;

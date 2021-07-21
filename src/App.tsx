@@ -6,6 +6,7 @@ import { Heading } from "./components/heading/heading";
 import "./App.css";
 import { CurrentWeather } from "./components/current-weather/current-weather";
 import { DailyWeatherSnapshot } from "./components/daily-weather-snapshot/daily-weather-snapshot";
+import { Clouds } from "./components/clouds/clouds";
 
 function App() {
   const currentPosition = useCurrentPosition();
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <main className="app">
+      <Clouds />
       <div className="app__body">
         <Heading className="app__heading" />
         <div className="app__body__current">
