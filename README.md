@@ -42,7 +42,7 @@ yarn format
 ### Unit Testing
 _The application is currently lacking proper unit test coverage_
 
-[Jest](https://www.npmjs.com/package/jest) + [Enzyme](https://www.npmjs.com/package/enzyme)
+[Jest](https://www.npmjs.com/package/jest) + [React Testing Library](https://www.npmjs.com/package/@testing-library/react)
 
 ### Code Formatting
 [Prettier](https://www.npmjs.com/package/prettier)
@@ -58,6 +58,10 @@ _The application is currently lacking proper unit test coverage_
 ### Tech
 #### Unit Test Coverage
 The application currently has very little Unit Test coverage due to the tight implementation period. This should be of top priority to remediate.
+
+Example unit tests have been created to act as a template for future testing efforts:
+* Utility example: `src/mappers/position.mappers.test.ts`
+* Component example: `src/components/current-weather/current-weather.test.tsx`
 
 #### End to End Test Coverage
 The application currently has no End to End test framework. End to End tests would compliment Unit Tests to ensure a consistent, bug-free end user experience.
