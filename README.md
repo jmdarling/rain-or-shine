@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Rain | Shine
+Rain or Shine - your favorite new weather app.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://rain-or-shine.jmdarling.com
 
-## Available Scripts
+## Preview
+### Desktop
+![Desktop Screenshot](./readme-resources/desktop.png)
 
-In the project directory, you can run:
+### Tablet
+![Tablet Screenshot](./readme-resources/tablet.png)
 
-### `yarn start`
+### Mobile
+![Mobile Screenshot](./readme-resources/mobile.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Developing
+### Install Dependencies
+```shell
+yarn install
+```
 
-### `yarn test`
+### Local Development Server
+```shell
+yarn start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Unit Tests
+```shell
+yarn test
+```
 
-### `yarn build`
+### Code Formatting
+```shell
+yarn format
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tooling
+### Component Framework
+[React](https://www.npmjs.com/package/react) (boilerplate by [create-react-app](https://www.npmjs.com/package/create-react-app))
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Unit Testing
+_The application is currently lacking proper unit test coverage_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Jest](https://www.npmjs.com/package/jest) + [Enzyme](https://www.npmjs.com/package/enzyme)
 
-### `yarn eject`
+### Code Formatting
+[Prettier](https://www.npmjs.com/package/prettier)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Services
+### Weather
+[OpenWeatherMap](https://openweathermap.org/) was chosen due to its generous free usage tier, and the robustness of its API.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Reverse Geo-Coding
+[OpenCage](https://opencagedata.com/) was chosen due to its generous free tier, and its (fairly unique) terms allowing it to be used standalone, without usage of a corresponding Map API.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Major TODOs
+### Tech
+#### Unit Test Coverage
+The application currently has very little Unit Test coverage due to the tight implementation period. This should be of top priority to remediate.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### End to End Test Coverage
+The application currently has no End to End test framework. End to End tests would compliment Unit Tests to ensure a consistent, bug-free end user experience.
 
-## Learn More
+### Functionality
+#### Fallback Interface When Location Services Unavailable
+As of right now, the application requires the end-user to have location services enabled, and they must agree to a prompt to allow short-term access. For users who do not wish to provide this access, a fallback experience should be implemented to allow for manual entering of location via Zip Code, Address, or the like.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Support For Multiple City Backgrounds
+The application background is currently limited to only showing imagery of Dallas. This should be expanded to allow imagery of more major cities, and fallback imagery should be provided should the user not be near a major city.
