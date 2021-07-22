@@ -1,28 +1,28 @@
 .current-weather {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    margin: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
 
-    color: #65AED5;
+  color: #65aed5;
 }
 
 .current-weather__description {
-    display: block;
+  display: block;
 
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .current-weather__detail-wrapper {
-    margin-left: 13px;
+  margin-left: 13px;
 }
 
 .current-weather__temperature {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 .current-weather__wind {
-    display: block;
+  display: block;
 
-    font-size: 14px;
+  font-size: 14px;
 }

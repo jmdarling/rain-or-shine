@@ -1,35 +1,34 @@
 @keyframes movecloud {
-    to {
-        left: 100vw;
-    }
+  to {
+    left: 100vw;
+  }
 }
 
 .clouds {
-    display: none;
+  display: none;
 }
 
 /* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
 @media (min-width: 576px) {
-    .clouds {
-        display: inline;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
+  .clouds {
+    display: inline;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
 }
-
 
 .clouds__cloud {
-    display: none;
+  display: none;
 }
 
 /* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
 @media (min-width: 576px) {
-    .clouds__cloud {
-        display: inline;
-        height: auto;
-        position: absolute;
+  .clouds__cloud {
+    display: inline;
+    height: auto;
+    position: absolute;
 
-        animation: movecloud 45s linear infinite;
-    }
+    animation: movecloud 45s linear infinite;
+  }
 }

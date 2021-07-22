@@ -15,7 +15,7 @@
   height: 100%;
   position: relative;
 
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 /* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
@@ -65,7 +65,7 @@
   position: absolute;
   width: 100%;
 
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 /* TODO: Implement CSS post-processor to enable the use of custom properties in media queries. */
@@ -74,7 +74,6 @@
     position: relative;
   }
 }
-
 
 .app__heading {
   position: absolute;
