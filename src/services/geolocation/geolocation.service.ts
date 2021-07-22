@@ -1,7 +1,7 @@
-import { Position, PositionDescription } from "../../models/geolocation.model";
-import { getConfiguration } from "../../utilities/configuration/configuration.utilities";
-import { OpenCagePosition } from "../../models/open-cage-position.model";
 import { mapOpenCagePositionToPositionDescription } from "../../mappers/position.mappers";
+import { Position, PositionDescription } from "../../models/geolocation.model";
+import { OpenCagePosition } from "../../models/open-cage-position.model";
+import { getConfiguration } from "../../utilities/configuration/configuration.utilities";
 
 export async function getPositionDescriptionFromPosition(
   position: Position

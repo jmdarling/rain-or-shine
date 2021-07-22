@@ -1,11 +1,10 @@
 import React, { useMemo } from "react";
-import { Weather } from "../../models/weather.model";
-import { titleCase } from "../../utilities/string/string.utilities";
-
-import "./current-weather.css";
-import { ConditionsDisplay } from "../conditions-display/conditions-display";
 import { TemperatureUnit } from "../../models/unit";
+import { Weather } from "../../models/weather.model";
 import { convertFahrenheitToCelsius } from "../../utilities/number/unit-conversion.utilities";
+import { titleCase } from "../../utilities/string/string.utilities";
+import { ConditionsDisplay } from "../conditions-display/conditions-display";
+import "./current-weather.css";
 
 export interface CurrentWeatherProps {
   temperatureUnit: TemperatureUnit;

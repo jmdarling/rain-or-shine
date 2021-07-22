@@ -1,5 +1,6 @@
 import { Configuration } from "../../models/configuration.model";
 
+// TODO: Pull these values from a configuration file.
 export function getConfiguration(): Configuration {
   return {
     openCageApiKey: "3c48b793119740a5823d10a209c87b7c",

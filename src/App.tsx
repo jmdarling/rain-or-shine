@@ -1,13 +1,12 @@
 import React, { useCallback, useState } from "react";
-import { useCurrentPosition } from "./hooks/use-current-position.hook";
-import { useWeather } from "./hooks/use-weather.hook";
-import { Heading } from "./components/heading/heading";
-
 import "./App.css";
+import { Clouds } from "./components/clouds/clouds";
 import { CurrentWeather } from "./components/current-weather/current-weather";
 import { DailyWeatherSnapshot } from "./components/daily-weather-snapshot/daily-weather-snapshot";
-import { Clouds } from "./components/clouds/clouds";
+import { Heading } from "./components/heading/heading";
 import { TemperatureUnitToggle } from "./components/temperature-unit-toggle/temperature-unit-toggle";
+import { useCurrentPosition } from "./hooks/use-current-position.hook";
+import { useWeather } from "./hooks/use-weather.hook";
 import { TemperatureUnit } from "./models/unit";
 
 function App() {

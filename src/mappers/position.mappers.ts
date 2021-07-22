@@ -1,5 +1,5 @@
-import { OpenCagePosition } from "../models/open-cage-position.model";
 import { PositionDescription } from "../models/geolocation.model";
+import { OpenCagePosition } from "../models/open-cage-position.model";
 
 export function mapOpenCagePositionToPositionDescription(
   openCagePosition: OpenCagePosition

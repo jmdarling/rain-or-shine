@@ -1,5 +1,5 @@
-import { Position } from "../models/geolocation.model";
 import { useEffect, useState } from "react";
+import { Position } from "../models/geolocation.model";
 import { Weather } from "../models/weather.model";
 import { getWeatherFromPosition } from "../services/weather/weather.service";
 

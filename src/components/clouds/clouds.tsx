@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getRandomInt } from "../../utilities/number/number.utilities";
-
-import "./clouds.css";
-
 import Cloud from "./cloud.svg";
+import "./clouds.css";
 
 const NUMBER_OF_CLOUDS = 4;
 

@@ -1,12 +1,9 @@
 import React from "react";
-
 import { WeatherMomentCondition } from "../../models/weather.model";
-
-import "./conditions-display.css";
-
 import Clear from "./clear.svg";
-import Clouds from "./partly-cloudy.svg";
+import "./conditions-display.css";
 import Drizzle from "./light-rain.svg";
+import Clouds from "./partly-cloudy.svg";
 import Rain from "./rain.svg";
 import Storm from "./storm.svg";
 

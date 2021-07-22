@@ -1,11 +1,10 @@
 import React, { useMemo } from "react";
+import { TemperatureUnit } from "../../models/unit";
 import { WeatherMoment } from "../../models/weather.model";
 import { getDayNameFromDayIndex } from "../../utilities/date/date-format.utilities";
-
-import "./daily-weather-snapshot.css";
-import { ConditionsDisplay } from "../conditions-display/conditions-display";
-import { TemperatureUnit } from "../../models/unit";
 import { convertFahrenheitToCelsius } from "../../utilities/number/unit-conversion.utilities";
+import { ConditionsDisplay } from "../conditions-display/conditions-display";
+import "./daily-weather-snapshot.css";
 
 export interface DailyWeatherSnapshotProps {
   temperatureUnit: TemperatureUnit;

@@ -1,8 +1,8 @@
-import { Weather } from "../../models/weather.model";
-import { getConfiguration } from "../../utilities/configuration/configuration.utilities";
-import { OpenWeather } from "../../models/open-weather.model";
 import { mapOpenWeatherToWeather } from "../../mappers/weather.mappers";
 import { Position } from "../../models/geolocation.model";
+import { OpenWeather } from "../../models/open-weather.model";
+import { Weather } from "../../models/weather.model";
+import { getConfiguration } from "../../utilities/configuration/configuration.utilities";
 
 export async function getWeatherFromPosition(
   position: Position

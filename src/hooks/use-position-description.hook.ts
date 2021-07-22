@@ -1,5 +1,5 @@
-import { Position, PositionDescription } from "../models/geolocation.model";
 import { useEffect, useState } from "react";
+import { Position, PositionDescription } from "../models/geolocation.model";
 import { getPositionDescriptionFromPosition } from "../services/geolocation/geolocation.service";
 
 export function usePositionDescription(currentPosition: Position | undefined) {

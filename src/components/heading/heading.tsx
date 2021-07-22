@@ -1,11 +1,9 @@
 import React, { useMemo } from "react";
-import { formatDateAsDayMonthDateYear } from "../../utilities/date/date-format.utilities";
-import { useDate } from "../../hooks/use-date.hook";
 import { useCurrentPosition } from "../../hooks/use-current-position.hook";
+import { useDate } from "../../hooks/use-date.hook";
 import { usePositionDescription } from "../../hooks/use-position-description.hook";
-
+import { formatDateAsDayMonthDateYear } from "../../utilities/date/date-format.utilities";
 import "./heading.css";
-
 import Location from "./location.svg";
 
 export interface HeadingProps {

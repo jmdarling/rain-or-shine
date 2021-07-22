@@ -1,6 +1,5 @@
 import React from "react";
 import { TemperatureUnit } from "../../models/unit";
-
 import "./temperature-unit-toggle.css";
 
 export interface UnitToggleProps {
